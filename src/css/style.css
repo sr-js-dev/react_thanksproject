@@ -1,0 +1,10 @@
+.container{
+    max-width: 900px;
+}
+.text-xs-center {
+    text-align: center!important;
+    display: block;
+}
+.button{
+    margin: 20px;
+}
