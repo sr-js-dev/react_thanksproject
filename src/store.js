@@ -3,7 +3,6 @@ import { createLogger } from 'redux-logger'
 import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
 import { promiseMiddleware, localStorageMiddleware } from './middleware';
 import reducer from './reducer';
-
 import { routerMiddleware } from 'react-router-redux'
 import { createBrowserHistory as createHistory } from 'history'
 
@@ -17,7 +16,7 @@ const getMiddleware = () => {
     return applyMiddleware(myRouterMiddleware, promiseMiddleware, localStorageMiddleware);
   } else {
     // Enable additional logging in non-production environments.
-    return applyMiddleware(myRouterMiddleware, promiseMiddleware, localStorageMiddleware, createLogger())
+    return applyMiddleware(myRouterMiddleware, promiseMiddleware, createLogger())
   }
 };
 
